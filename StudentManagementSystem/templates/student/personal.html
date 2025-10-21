@@ -1,0 +1,21 @@
+<!— extends layout —>
+<div xmlns:th="http://www.thymeleaf.org" th:replace="fragments/layout :: body">
+  <div class="row g-3">
+    <div class="col-12 col-lg-8">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h2 class="h5 mb-3">Student Personal Information</h2>
+          <dl class="row">
+            <dt class="col-sm-4">Name</dt><dd class="col-sm-8" th:text="${student.fullName}"></dd>
+            <dt class="col-sm-4">Email</dt><dd class="col-sm-8" th:text="${student.email}"></dd>
+            <dt class="col-sm-4">Year Level</dt><dd class="col-sm-8" th:text="${student.yearLevel}"></dd>
+          </dl>
+          <div class="d-flex gap-2">
+            <a class="btn btn-outline-primary" th:href="@{/student/courses}">Course-Taking page</a>
+            <a class="btn btn-outline-success" th:href="@{/student/grades}">Grades page</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

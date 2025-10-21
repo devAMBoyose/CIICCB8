@@ -1,0 +1,17 @@
+<div xmlns:th="http://www.thymeleaf.org" th:replace="fragments/layout :: body">
+  <h2 class="h5 mb-3">Students (by your courses)</h2>
+  <div class="table-responsive">
+    <table class="table table-striped">
+      <thead><tr><th>Course</th><th>Student</th><th>Email</th><th>Grade</th></tr></thead>
+      <tbody>
+        <tr th:each="e : ${enrollments}"
+            th:if="${#lists.contains(courses.^map(c->c.code), e.courseCode)}">
+          <td th:text="${e.courseCode}"></td>
+          <td th:text="${#lists.findFirst(students, s -> s.username == e.studentUsername)?.fullName}"></td>
+          <td th:text="${#lists.findFirst(students, s -> s.username == e.studentUsername)?.email}"></td>
+          <td th:text="${e.grade != null ? e.grade : '—'}"></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

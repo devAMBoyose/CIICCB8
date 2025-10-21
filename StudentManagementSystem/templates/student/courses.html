@@ -1,0 +1,15 @@
+<div xmlns:th="http://www.thymeleaf.org" th:replace="fragments/layout :: body">
+  <h2 class="h5 mb-3">Courses You Take</h2>
+  <div class="table-responsive">
+    <table class="table table-striped align-middle">
+      <thead><tr><th>Code</th><th>Title</th><th>Units</th></tr></thead>
+      <tbody>
+        <tr th:each="e : ${enrollments}">
+          <td th:text="${e.courseCode}"></td>
+          <td th:text="${#temporals.createNow() != null ? courseByCode.apply(e.courseCode).title : ''}"></td>
+          <td th:text="${courseByCode.apply(e.courseCode).units}"></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

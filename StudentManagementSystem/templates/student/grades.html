@@ -1,0 +1,17 @@
+<div xmlns:th="http://www.thymeleaf.org" th:replace="fragments/layout :: body">
+  <h2 class="h5 mb-3">Grades</h2>
+  <div class="table-responsive">
+    <table class="table table-hover">
+      <thead><tr><th>Course</th><th>Title</th><th>Grade</th></tr></thead>
+      <tbody>
+        <tr th:each="e : ${enrollments}">
+          <td th:text="${e.courseCode}"></td>
+          <td th:text="${courseByCode.apply(e.courseCode).title}"></td>
+          <td>
+            <span th:text="${e.grade != null ? e.grade : '—'}"></span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

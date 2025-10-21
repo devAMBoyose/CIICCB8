@@ -1,0 +1,12 @@
+<div xmlns:th="http://www.thymeleaf.org" th:replace="fragments/layout :: body">
+  <h2 class="h5 mb-3">Teacher Personal Information</h2>
+  <dl class="row">
+    <dt class="col-sm-3">Name</dt><dd class="col-sm-9" th:text="${teacher.fullName}"></dd>
+    <dt class="col-sm-3">Email</dt><dd class="col-sm-9" th:text="${teacher.email}"></dd>
+    <dt class="col-sm-3">Department</dt><dd class="col-sm-9" th:text="${teacher.department}"></dd>
+  </dl>
+  <div class="d-flex gap-2">
+    <a class="btn btn-outline-secondary" th:href="@{/teacher/students}">Student Information page</a>
+    <a class="btn btn-outline-primary" th:href="@{/teacher/courses}">Course-Teaching page</a>
+  </div>
+</div>

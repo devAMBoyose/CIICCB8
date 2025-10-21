@@ -1,0 +1,13 @@
+<div xmlns:th="http://www.thymeleaf.org" th:replace="fragments/layout :: body">
+  <h2 class="h5 mb-3">Courses You Teach</h2>
+  <div class="row row-cols-1 row-cols-md-2 g-3">
+    <div class="col" th:each="c : ${courses}">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title" th:text="${c.code} + ' – ' + ${c.title}"></h5>
+          <p class="card-text"><span class="badge bg-secondary" th:text="${c.units} + ' units'"></span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
