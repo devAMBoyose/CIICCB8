@@ -1,0 +1,12 @@
+╔═══════════════╦══════════════╦══════════════════════════════════════════════════════╦════════════════════╗
+║ Type          ║ Keyword      ║ Purpose                                              ║ Example Filename   ║
+╠═══════════════╬══════════════╬══════════════════════════════════════════════════════╬════════════════════╣
+║ Single Class  ║ class        ║ Main program class                                   ║ HelloWorld.java    ║
+║ Multi-Class   ║ class        ║ Helper classes in same file                          ║ MainProgram.java   ║
+║ Package       ║ package      ║ Organized folder structure                           ║ App.java           ║
+║ Interface     ║ interface    ║ Define behavior contracts                            ║ Animal.java        ║
+║ Abstract      ║ abstract     ║ Base class with incomplete methods                   ║ Shape.java         ║
+║ Enum          ║ enum         ║ Fixed set of constants                               ║ Day.java           ║
+║ Record        ║ record       ║ Compact data class (Java 14+)                        ║ Person.java        ║
+║ Annotation    ║ @interface   ║ Custom metadata                                      ║ AuthorInfo.java    ║
+╚═══════════════╩══════════════╩══════════════════════════════════════════════════════╩════════════════════╝
