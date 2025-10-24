@@ -20,4 +20,17 @@ public class Toy {
 
     }
 
+    class InnerToy1 {   
+        
+    }
+
+    class InnerToy2 {   
+        
+    }
+
+    class InnerToy3 {   
+        
+    } //multiple inner classes one public class only
 }
+
+//if you have multiple classes only one class can be public and the file name should be the same as the public class name
