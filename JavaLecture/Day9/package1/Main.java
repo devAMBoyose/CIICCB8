@@ -8,6 +8,8 @@
          * toy1.quantity = 5;
          */
 
+package package1;
+
 public class Main {
     public static void main(String[] args) {
         Toy toy1 = new Toy();
