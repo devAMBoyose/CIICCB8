@@ -1,57 +1,20 @@
-package Quiz.SchoolSystemUMLDiagram;
-
-import Quiz.SchoolSystemUMLDiagram.SchoolDepartment.*; // Department, Teacher, Office, FacultyRoom, School
-
-public class Main {
+public class Task2 {
     public static void main(String[] args) {
-        // Build the model
-        School school = new School("CIICC Integrated School");
 
-        // Offices (1..*)
-        Office officeA = new Office("O-A", "Main Bldg 1F", 10);
-        Office officeB = new Office("O-B", "Annex 2F", 8);
-        FacultyRoom facultyRoom = new FacultyRoom("FR-1", "Main Bldg 2F", 20);
+        // primitive types
+        byte zero = 0;
+        short one = 1;
+        float f = 2.0f;
+        char H = 'H';
+        char w = 'w';
+        char r = 'r';
+        char d = 'd';
+        boolean isTrue = true;
 
-        school.addOffice(officeA);
-        school.addOffice(officeB);
-        school.designateFacultyRoom(facultyRoom); // exactly 1
+        // concatenate them into a string
+        String output = H + "" + (one + 2) + one + one + zero + " " + w + zero + r + one + d + " " + f + " " + isTrue;
 
-        // Departments (1..*)
-        Department cs   = new Department("CS",   "Computer Studies");
-        Department math = new Department("MATH", "Mathematics");
-        school.addDepartment(cs);
-        school.addDepartment(math);
-
-        // Departments are located in 1..* Offices
-        cs.addOffice(officeA);
-        cs.addOffice(facultyRoom);     // allowed near faculty room
-        math.addOffice(officeB);
-
-        // Teachers (1..*)
-        Teacher t1 = new Teacher("T001", "Ana Boyose",  "Java");
-        Teacher t2 = new Teacher("T002", "Krystel D.",  "DBMS");
-        Teacher t3 = new Teacher("T003", "Jason P.",    "Calculus");
-
-        cs.addTeacher(t1);
-        cs.addTeacher(t2);
-        math.addTeacher(t3);
-
-        // Master teacher (exactly 1 in each department)
-        cs.assignMaster(t1);
-        math.assignMaster(t3);
-
-        // Demo actions
-        facultyRoom.facultyRules();
-        t1.teach();
-        officeA.reserve();
-
-        // Summary
-        System.out.println("\n=== SCHOOL JAVA DETAILS ===");
-        System.out.println(school);
-        school.getDepartments().forEach(d -> {
-            System.out.println(" - " + d);
-            d.getOffices().forEach(o -> System.out.println("    * located in: " + o));
-            d.listTeachers().forEach(t -> System.out.println("    * teacher: " + t));
-        });
+        // final output
+        System.out.println(output);
     }
 }
