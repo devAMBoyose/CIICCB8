@@ -1,20 +1,24 @@
 public class Task3 {
     public static void main(String[] args) {
 
+        // String a = new String("Wow");
+        // String b = "Wow";
+        // String c = a;
+        // String d = c;
+
         // (Strings)
         String a = "Wow";      
         String b = a;
         String c = "Hello";
-        String d = "Wowr";
+        String d = "Wow!"; // change from "Wowr" to "Wow!"
 
-        // conditions
         boolean b1 = (a == b);             
-        boolean b2 = d.equals(b + "r");
+        boolean b2 = d.equals(b + "!");
         boolean b3 = !c.equals(a);
 
-        // if true print "Success!"
         if (b1 && b2 && b3) {
             System.out.println("Success!");
         }
+
     }
 }
