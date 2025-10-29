@@ -1,4 +1,15 @@
-  // Create and instance a Toy object
+    // Create and instance a Toy object
+package package1; 
+
+import java.util.Random; 
+
+public class Main {
+    public static void main(String[] args) {
+        Toy toy1 = new Toy();
+        toy1.name = "Range pink";
+        toy1.brand = "ToyBrand";
+        toy1.price = 10.99;
+        toy1.quantity = 5;
 
         /* this is multiline comment
          * Toy toy1 = new Toy();
@@ -8,7 +19,7 @@
          * toy1.quantity = 5;
          */
 
-package package1;
+
 
 public class Main {
     public static void main(String[] args) {
