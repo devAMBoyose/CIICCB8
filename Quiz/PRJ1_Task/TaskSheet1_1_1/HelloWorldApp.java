@@ -13,7 +13,6 @@ class HelloWorldApp {
         System.out.println("Kamusta Mundo!");
     }
 }
-
 // The code has errors because clas is misspelled, it should be class. The class
 // name helloWorldApp must start with a capital letter and match the file name
 // HelloWorldApp. The print command System.out.rintln is missing the letter p,
