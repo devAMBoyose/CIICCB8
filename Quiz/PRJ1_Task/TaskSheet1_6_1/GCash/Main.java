@@ -16,7 +16,16 @@
  * anna	1234	₱1500.00	Customer 1
  * bamby 4321	₱750.00	Customer 2
  * guest 1111 ₱100.00	Customer 3 (test/low balance)
- * Support : engineer 9999
+ * Support ID : engineer 9999
+ * 
+ * 
+ * Customer Menu
+ * 1.) Check Balance
+ * 2.) Deposit Cash
+ * 3.) Withdraw Cash
+ * 4.) Transefer
+ * 5.) App Help
+ * 6. Logout
  * 
  */
 
@@ -164,7 +173,7 @@ public class Main {
             try {
                 return Integer.parseInt(in.nextLine().trim());
             } catch (Exception e) {
-                System.out.print("Enter a whole number: ");
+                System.out.print("Enter a Support ID number: ");
             }
         }
     }
